@@ -99,7 +99,7 @@ From there, there are 2 options you have to switch from No to Yes
 
 After submitting this change, find the option **Post Call Recording Script**
 
-On that option you should set the folloing value
+On that option field you should set the following value
 
 > /opt/flexie/recording.js --call-id=^{UNIQUEID} --rec-year=^{YEAR} --rec-month=^{MONTH} --rec-day=^{DAY} --rec-filename=^{CALLFILENAME}.^{MIXMON_FORMAT}
 
