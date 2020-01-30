@@ -1,0 +1,17 @@
+{
+  "name": "flexie",
+  "version": "1.0.0",
+  "description": "Flexie CRM integration with FreePBX - Get real time events from Asterisk Manager",
+  "main": "init.js",
+  "scripts": {
+    "run": "pm2 start init --watch --name='Flexie CRM event listener'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asterisk-ami": "^0.1.0",
+    "axios": "^0.19.2",
+    "bottleneck": "^2.19.5",
+    "yargs": "^15.1.0"
+  }
+}
