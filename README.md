@@ -55,6 +55,10 @@ You should install git if your FreePBX box does not already have it installed
 
 > [root@freepbx ~]# git clone https://github.com/flexie-crm/freepbx-webhooks .
 
+Then you need to install dependences
+
+> [root@freepbx ~]# npm install
+
 ## Step 4
 
 After creating the Asterisk Manager user from the step one, put those credentials in the config.js file (from the files you cloned on this repository), specifically in the asterisk_user and asterisk_pass keys
