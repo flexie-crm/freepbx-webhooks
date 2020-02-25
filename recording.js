@@ -20,11 +20,11 @@ if ([callId, recYear, recMonth, recDay, recFilename].every(Boolean)) {
 	try {
 
 		const recording = {
-			call_id: callId,
+			call_id: `${callId}`,
 			call_recording: `${config.voip_recordings_url}/${recYear}/${recMonth}/${recDay}/${recFilename}`
 		}
 
-		setTimeout( async () => { await flexie.sendCallRecordingToFlexie(recording) }, 10000)
+		setTimeout( async () => { await flexie.sendCallRecordingToFlexie(recording) }, 30000)
 	} catch(e) {
 		return console.log('There was an error sending recording details to Flexie', e)
 	}
