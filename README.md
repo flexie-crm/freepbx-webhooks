@@ -31,6 +31,9 @@ Then opnen this file with your preferred command line editor (vim or nano or wha
 ```
 [general]
 enabled = yes
+
+[mappings]
+recordingfile => recordingfile
 ```
 
 Then you can enter asterisk console and enable the module
@@ -83,27 +86,6 @@ In order to have this a running process in your FreePBX box you should install P
 After installing pm2 you are ready to start your listener process
 
 > [root@freepbx ~]# pm2 start init.js --name="Flexie CRM Listener"
-
-## Step 6
-
-After completing the above 5 steps, there is another step in order to push recordings URL in Flexie call logs.
-
-In your FreePBX admin panel, navigate in Advanced Settings.
-
-> **Settings** -> **Advanced Settings**
-
-From there, there are 2 options you have to switch from No to Yes
-
-- Display Readonly Settings
-- Override Readonly Settings
-
-After submitting this change, find the option **Post Call Recording Script**
-
-On that option field you should set the following value
-
-> /opt/flexie/recording.js --call-id=^{UNIQUEID} --rec-year=^{YEAR} --rec-month=^{MONTH} --rec-day=^{DAY} --rec-filename=^{CALLFILENAME}.^{MIXMON_FORMAT}
-
-Submit changes, then Apply Config (red button top right)
 
 Now you are ready to get all call logs in your Flexie CRM, from there Flexie would take care of mapping each log to records you have like your customers/contacts, leads or any other records.
 

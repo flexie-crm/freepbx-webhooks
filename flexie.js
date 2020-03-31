@@ -2,6 +2,7 @@ const axios = require('axios')
 const Bottleneck = require("bottleneck")
 const config = require('./config')
 
+// Deprecated! No need to use this method anymore.
 const sendCallRecordingToFlexie = async (data) => {
 	if(config.flexie_url) {
 

@@ -67,6 +67,11 @@ ami.on('ami_data', (data) => {
                     break
             }
 
+			const date = new Date()
+			const currentYear = date.getFullYear()
+			const currentMonth = ('0' + (date.getMonth() + 1)).slice(-2)
+			const currentDay = ('0' + date.getDate()).slice(-2)
+
     		const callData = {
     			call_id: data.uniqueid,
 				user_ext: user_ext,
@@ -74,7 +79,7 @@ ami.on('ami_data', (data) => {
 				dial_to: destination,
 				call_direction: direction,
 				call_duration: data.billableseconds,
-				call_recording: '',
+				call_recording: (data.recordingfile) ? `${config.voip_recordings_url}/${currentYear}/${currentMonth}/${currentDay}/${data.recordingfile}` : '',
 				answer_time: data.answertime
     		}
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// Deprecated! We send recording file directly from Cdr Event Log, on init.js file
+// So no need to use this one anymore.
+
 const argv = require('yargs').argv
 const flexie = require('./flexie')
 const config = require('./config.js')
