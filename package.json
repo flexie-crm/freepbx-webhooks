@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "asterisk-ami": "^0.1.0",
-    "axios": "^0.19.2",
+    "axios": "*",
     "bottleneck": "^2.19.5",
     "yargs": "^15.1.0"
   }
